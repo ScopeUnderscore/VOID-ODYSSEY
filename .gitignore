@@ -1,0 +1,18 @@
+# macOS specific
+.DS_Store
+*.dSYM/
+
+# C Build Artifacts
+*.o
+*.a
+*.dylib
+
+# Future Game Engine build directory
+build/
+# Ignore the compiled exercises
+foundation/00_memory
+foundation/01_pointers
+foundation/02_structs
+foundation/03_bits
+foundation/04_functions
+foundation/05_preprocessor
