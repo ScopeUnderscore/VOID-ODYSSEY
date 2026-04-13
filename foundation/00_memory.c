@@ -121,6 +121,27 @@ int main(void)
            sizeof(int));
 
 
+    /*
+     * ════════════════════════════════════════════════════════════════════
+     *  Arrays ARE Pointers
+     * ════════════════════════════════════════════════════════════════════
+     *
+     * This sis critical for the game engine. Pixel buffer will be accessed as
+     * both :
+     *      - uint32_t *pixels (pointer to the first pixel)
+     *      - pixels[y * width + x] (array-style access)
+    */
+
+    uint32_t pixels[4] = {0xFFFF0000,0xFF00FF00, 0xFF0000FF, 0xFFFFFFFF};
+    uint32_t *pixel_ptr = pixels;
+
+    printf("    pixels = %p\n", pixels);
+    printf("    pixel_ptr = %p\n",pixel_ptr);
+    printf("    &pixels[0] = %p\n", &pixels[0]);
+
+
+
+
 }
 
 
